@@ -1,0 +1,66 @@
+.theme-picker {
+	--tp-bg: #1b1b1f;
+	--tp-fg: #fff;
+	--tp-muted: #c4c4cc;
+	--tp-line: #55555e;
+	--tp-mark: #ff8a4c;
+	position: fixed;
+	inset-block-end: 12px;
+	inset-inline-start: 12px;
+	z-index: 2147483000;
+	max-inline-size: calc(100vw - 24px);
+	background: var(--tp-bg);
+	color: var(--tp-fg);
+	font: 14px/1.4 system-ui, sans-serif;
+	border: 1px solid var(--tp-line);
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgb(0 0 0 / 0.3);
+}
+@media (prefers-color-scheme: dark) {
+	.theme-picker {
+		--tp-bg: #f4f4f6;
+		--tp-fg: #15151a;
+		--tp-muted: #55555e;
+		--tp-line: #a0a0aa;
+		--tp-mark: #b53a00;
+	}
+}
+.theme-picker summary {
+	cursor: pointer;
+	padding-block: 8px;
+	padding-inline: 12px;
+	font-weight: 600;
+}
+.theme-picker nav {
+	max-block-size: calc(100dvh - 90px);
+	overflow-y: auto;
+	padding-block-end: 6px;
+}
+.theme-picker summary:focus-visible,
+.theme-picker a:focus-visible {
+	outline: 2px solid var(--tp-mark);
+	outline-offset: -2px;
+}
+.theme-picker ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.theme-picker a {
+	display: block;
+	padding-block: 8px;
+	padding-inline: 12px;
+	color: var(--tp-fg);
+	text-decoration: none;
+}
+.theme-picker a:hover {
+	text-decoration: underline;
+}
+.theme-picker a[aria-current] {
+	border-inline-start: 3px solid var(--tp-mark);
+	font-weight: 600;
+}
+.theme-picker .theme-picker-reset {
+	border-block-start: 1px solid var(--tp-line);
+	color: var(--tp-muted);
+}

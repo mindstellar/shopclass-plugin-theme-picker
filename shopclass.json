@@ -1,0 +1,20 @@
+{
+  "$schema": "../schema/package.schema.json",
+  "slug": "theme-picker",
+  "type": "plugin",
+  "modes": ["classifieds", "shop"],
+  "categories": [
+    "integrations"
+  ],
+  "tags": [
+    "demo",
+    "themes",
+    "preview"
+  ],
+  "short_description": "Demo sites only: a small bar that lets each visitor try every installed theme.",
+  "license": "GPL-3.0-or-later",
+  "support": {
+    "issues": "https://github.com/mindstellar/shopclass-plugin-theme-picker/issues",
+    "docs": "https://github.com/mindstellar/shopclass-plugin-theme-picker#readme"
+  }
+}
