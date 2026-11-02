@@ -17,7 +17,8 @@
 require __DIR__ . '/../src/Picker.php';
 
 $core = rtrim((string) (getenv('SHOPCLASS_CORE') ?: dirname(__DIR__) . '/../osclass'), '/');
-require_once $core . '/oc-includes/osclass/classes/security/Demo.php';
+$demo = $core . '/oc-includes/classes/core/security/Demo.php';
+require_once is_file($demo) ? $demo : $core . '/oc-includes/osclass/classes/security/Demo.php';
 
 use mindstellar\security\Demo;
 use mindstellar\themepicker\Picker;
