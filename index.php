@@ -3,7 +3,7 @@
 Plugin Name: Theme Picker
 Plugin URI: https://github.com/mindstellar/shopclass-plugin-theme-picker
 Description: Demo sites only. A small bar lets each visitor try every installed theme, and go back to the main one.
-Version: 0.1.0
+Version: 0.1.1
 Author: Mindstellar
 Author URI: https://mindstellar.com
 Short Name: theme-picker

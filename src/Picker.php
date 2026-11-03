@@ -76,7 +76,7 @@ final class Picker
      */
     public static function themes(): array
     {
-        $web    = WebThemes::newInstance();
+        $web    = WebThemes::getInstance();
         $themes = array();
         foreach ((array) $web->getListThemes() as $slug) {
             $info          = $web->loadThemeInfo($slug);
@@ -129,7 +129,7 @@ final class Picker
         );
         echo self::html(
             self::themes(),
-            WebThemes::newInstance()->getCurrentTheme(),
+            WebThemes::getInstance()->getCurrentTheme(),
             osc_theme(),
             (string) ($_SERVER['REQUEST_URI'] ?? '/'),
             $labels,
